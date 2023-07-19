@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <section class="section">
+
+            <div class="slide active col">
+                <div class="container-fluid">
+                    <div class="row bg">
+                                <img src="~/images/captura.png" class="bog" />
+                        <div class="slide2 d-flex flex-column justify-content-center align-items-center">
+                            <div class="container text-center p-4">
+                                <div class="col-md-6 mx-auto">
+                                <h1>¿Quieres sumarte a nuestro equipo?</h1>
+                                <p>
+                                    Contamos con una historia de más de 26 años de experiencia en el transporte industrial, moviendo día a día a la fuerza laboral de importantes empresas del país.
+                                    <br /><br />
+                                    Para sumarte a nuestro equipo de trabajo envíanos tu CV a seleccion.industrial@viggo.cl y si tu perfil se ajusta a las vacantes vigentes nuestro equipo de reclutamiento y selección se contactará contigo.
+                                    <br /><br />
+                                    También puedes hacer más rápido la postulación enviando tus datos personales aquí abajo
+                                </p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <i class="bi bi-arrow-down icon-move"></i>
+                             
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Contenido del segundo slide -->
+            <div class="slide1 slide" id="Slide1">
+                <div class="form">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <h3 class="pb-3">Información Personal</h3>
+                        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" placeholder="Dirección" aria-label="Direccion">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label">Rut</label>
+                        <input type="text" class="form-control" placeholder="Ej:1.234.567-K" aria-label="Rut">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label">N° Celular</label>
+                        <input type="tel" class="form-control" placeholder="Ej:+56912345678" aria-label="Celular">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                
+                <div class="form">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <h3 class="pb-3">Postulación</h3>
+                        <label for="cargoInput" class="form-label">Cargo</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="cargoInput" placeholder="Seleccione un cargo" readonly>
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="selectCargo('Analista programador')">Analista programador</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="selectCargo('Desarrollador FullStack')">Desarrollador FullStack</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="selectCargo('Diseñador UX/UI')">Diseñador UX/UI</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="selectCargo('Ingeniero de Software')">Ingeniero de Software</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="selectCargo('Administrador de Sistemas')">Administrador de Sistemas</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="selectCargo('Project Manager')">Project Manager</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="selectCargo('Consultor Tecnológico')">Consultor Tecnológico</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label">Pretención de Renta</label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="montoInput" placeholder="Ingrese el monto">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label">CV</label>
+                        <input type="file" class="form-control" placeholder="Adjunta CV en .pdf" aria-label="CV">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcionInput" rows="5" placeholder="Ingrese breve descripción" style="resize: none;height:105px;"></textarea>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="align-items-center">
+                        <button class="btn btn-secondary postula">Postula!</button>
+                    </div>
+                    
+                    
+                </div>
+                <!-- Contenido del 3er slide -->
+            </div>
+            
+   
+    </section>
+    <script>
+    function selectCargo(cargo) {
+        document.getElementById("cargoInput").value = cargo;
+    }
+</script>

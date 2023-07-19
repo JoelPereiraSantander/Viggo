@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Viga</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Viga.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0/css/bootstrap-select.min.css" rel="stylesheet" />
+   
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg" onmouseover="showMiniNav()" onmouseout="hideMiniNav()">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarScroll">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SOMOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FLOTA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SERVICIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">VIGGO CONNECT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SEGURIDAD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">COTIZA CON NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TRABAJA EN VIGGO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">COMPLIANCE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">MÁS MUJERES AL VOLANTE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="mini-nav" id="miniNav" onmouseover="showMiniNav()" onmouseout="hideMiniNav()">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <img class="left-image" src="~/images/VIGGO-LOGO-BLANCO-mr.png" style="margin-right: auto;">
+        </div>
+        <div class="icons">
+                    <a href="#"><i class="bi bi-facebook" style="color: lightblue;"></i></a>
+                    <a href="#"><i class="bi bi-whatsapp" style="color: lightgreen;"></i></a>
+                    <a href="#"><i class="bi bi-linkedin" style="color: lightblue;"></i></a>
+        </div>
+    </div>
+</nav>
+    </header>
+    <div class="container-fluid">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <div id="footer-slide" class="container-fluid foter">
+        <div class="row pb-5">
+            <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                <div class="col">
+                    <h2>Cobertura Geográfica</h2>
+                    <br />
+                    <p>
+                        En Viggo nos adaptamos a las necesidades de nuestros clientes, atendiendo contratos de transporte
+                        industrial en la zona norte, centro y sur del país, contando con sucursales y talleres en las ciudades de
+                        Iquique, Calama, Antofagasta, Copiapó, Santiago y Concepción, lo que nos permite abarcar las rutas y
+                        servicios que nuestros clientes necesitan realizar.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                <div class="col">
+                    <h2>Agencias</h2>
+                    <br />
+                    <h6>Iquique</h6>
+                    <p>Bajo Los Molles S/N Km8 Vía 1 Manzana J.</p>
+                    <br />
+                    <h6>Antofagasta</h6>
+                    <p>Av. del Agua 15100, Barrio Industrial La Portada</p>
+                    <br />
+                    <h6>Calama</h6>
+                    <p>Av. Circunvalación 1117 A.</p>
+                    <br />
+                    <h6>Copiapó</h6>
+                    <p>Ruta 5 Norte, Acceso Sur 4550</p>
+                    <h6>Santiago</h6>
+                    <p>Obispo Manuel Umaña 703, Estación Central</p>
+                    <h6>Yungay</h6>
+                    <p>Camino Cholguán – Yungay, km 3,5, Yungay</p>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                <div class="col">
+                    <h2>Contactos</h2>
+                    <br />
+                    <p><i class="bi bi-envelope"></i> comercial@viggo.cl  </p>
+                    <p><i class="bi bi-telephone"></i> (56 2) 2822 7337</p>
+                    <p><i class="bi bi-telephone"></i> (56 2) 2822 7335</p>
+                    <br />
+                    <h6>Trabaje con Nosotros</h6>
+                    <p>seleccion.industrial@viggo.cl</p>
+                    <br />
+                    <h6>Atención a Proveedores</h6>
+                    <p>asistente.gestion@viggo.cl</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid viggo">
+            <p>Desarrollado por Viggo</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0/js/bootstrap-select.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var currentSlide = 0;
+            var totalSlides = $('.slide').length + 1; // Agregar 1 al total de slides para incluir el footer
+            var windowHeight = $(window).height();
+
+            // Elemento para mostrar el indicador de slides
+            var slideIndicator = $('<div>', {
+                id: 'slide-indicator',
+                text: (currentSlide + 1) + '/' + totalSlides
+            });
+
+            // Agregar el indicador de slides al body y centrarlo
+            $('body').append(slideIndicator);
+            slideIndicator.css('position', 'fixed');
+            slideIndicator.css('bottom', '20px');
+            slideIndicator.css('left', '50%');
+            slideIndicator.css('transform', 'translateX(-50%)');
+            slideIndicator.css('text-align', 'center');
+
+            $(window).on('wheel', function (event) {
+                var delta = event.originalEvent.deltaY;
+
+                if (delta > 0) {
+                    if (currentSlide < totalSlides - 1) {
+                        currentSlide++;
+                        showSlide(currentSlide);
+                    }
+                } else if (delta < 0) {
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        showSlide(currentSlide);
+                    }
+                }
+            });
+
+            $(window).on('keydown', function (event) {
+                if (event.keyCode === 38) {
+                    // Flecha hacia arriba
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        showSlide(currentSlide);
+                    }
+                } else if (event.keyCode === 40) {
+                    // Flecha hacia abajo
+                    if (currentSlide < totalSlides - 1) {
+                        currentSlide++;
+                        showSlide(currentSlide);
+                    }
+                }
+            });
+
+            $(window).on('touchstart touchmove', function (event) {
+                var touchY = event.originalEvent.touches[0].clientY;
+                var touchArea = touchY < windowHeight * 0.1 ? 'top' : touchY > windowHeight * 0.9 ? 'bottom' : null;
+
+                if (touchArea === 'top') {
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        showSlide(currentSlide);
+                    }
+                } else if (touchArea === 'bottom') {
+                    if (currentSlide < totalSlides - 1) {
+                        currentSlide++;
+                        showSlide(currentSlide);
+                    }
+                }
+            });
+
+            function showSlide(slideIndex) {
+                if (slideIndex < totalSlides - 1) {
+                    $('.slide').hide();
+                    $('.slide:eq(' + slideIndex + ')').fadeIn(1150);
+                } else {
+                    // Mostrar el footer en el último slide
+                    $('.slide').hide();
+                    $('#footer-slide').fadeIn(1150);
+                }
+
+                // Actualizar el indicador de slide
+                slideIndicator.text((slideIndex + 1) + '/' + totalSlides);
+            }
+        });
+    </script>
+    <script>
+        function showMiniNav() {
+            var miniNav = document.getElementById('miniNav');
+            miniNav.style.display = 'block';
+        }
+
+        function hideMiniNav() {
+            var miniNav = document.getElementById('miniNav');
+            miniNav.style.display = 'none';
+        }
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
